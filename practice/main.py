@@ -1,7 +1,129 @@
 a = "mateen nawaz"
+
+para = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged 86."
+
+str1 = "welcomeMateen86"
+str2 = "welcomeMateeen     "
+
 print(a)
 print(a.upper())
 print(a.lower())
 print(a.rstrip())
 print(a.replace("Nawaz", "Mirani"))
 print(a.capitalize())
+print(a.__len__())
+
+
+
+print(para.__len__())
+# print(para.split(" "))
+print(para.center(100))
+
+# Count is used for count the words pressence in the string
+print(para.count('a'))
+print(a.endswith('waz')) # it check's that the given string ends on this character
+
+
+# Find() this method is used the find the searching index
+print(para.find('scrambled'))
+
+# index() this method is throw an error if string not exist
+# print(para.index('Mateen'))
+
+
+# It return true only if A-Z, a-z, 0-9
+print(str1.isalnum())
+
+# It return true only if A-Z, a-z
+print(str2.isalpha())
+
+# It return true only if all character of string small
+print(str2.islower())
+
+# It return true only if all character of string printable
+print(str2.isprintable())
+
+# It return true only if string contain any white-space
+print(str2.isspace())
+
+
+# It return true only if the the letter of each word in string is capitalize
+print(str2.istitle())
+
+
+# This method is used to swap between lower and upper cases of letter
+print(str2.swapcase())
+
+# This method is used to capitalize the each starting letter of word
+print(para.title())
+
+
+# Conditional statements
+# x = int(input("Please enter your age: "))
+# print("enter value of x is: ", x)
+
+# if(x == 18):
+#     print("You've to drive the bike!")
+# elif( x > 18):
+#     print("You've to drive a car!")
+# else:
+#     print("Invalid input")
+
+
+
+# Another example related to conditions
+# applePrice = int(input("Please enter a apple price: "))
+# budget = int(input("Please enter a budget: "))
+
+# if(budget - applePrice > 100):
+#     print("Please buy more apple")
+# elif(budget - applePrice == 100):
+#     print ('Please buy just 1kg more apple.')
+# else:
+#     print("Please do not buy any more apple!")
+
+
+
+# Match or switch cases
+
+# y = int(input("Please enter a value of y: "))
+
+# match y:
+#     case 0:
+#         print(y, "is equal to zero")
+#     case _ if y >= 100:
+#         print("Entered value is greater than: ", y)
+#     case _ if y < 100:
+#         print("Entered value is less than: ", y)
+    
+#     case _ : 
+#         print("Invalid input!")
+
+
+
+# Loops
+
+# 1. uses of for loop with string
+myName = "Mateen"
+
+# for i in myName:
+#     print(i)
+    
+#     if(i == 'n'):
+#         newChar = input("Please enter a new alternative letter: ")
+#         updated = myName.replace(i, newChar)
+#         print(updated)
+
+
+# 2. uses of loop with list
+
+itemList = ["Apple", "Mango", "Banana", "Orange"]
+
+for i in itemList:
+    print(i)
+    
+    # Change the existing element of the list
+    if i == "Banana":
+        newInp = input("Please enter a new value: ")
+        itemList[i] = newInp
+        print(itemList)
