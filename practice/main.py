@@ -181,22 +181,234 @@
 
 
 # Let's start with the functions
-def calculcateMean(a,b):
-    mean = (a*b)/(a+b)
-    print("Mean of two number is: ", mean)
+# def calculcateMean(a,b):
+#     mean = (a*b)/(a+b)
+#     print("Mean of two number is: ", mean)
+    
+# calculcateMean(8, 6)
+
+# def greeting(x):
+#     if(x == 6 & x <= 10):
+#         print("Good Morning!, Mateen")
+#     elif (x > 10 & x <= 12):
+#         print('Good Afternoon!, Mateen')
+#     else:
+#         print("Good Night!, Mateen")
+        
+# greeting(8)
+
+
+# 1. Default arguements
+def average(a=9, b=1):
+    print("The average of two number is: ", (a+b)/2)
+
+# If i simply call the function then it will take the default args
+average()
+
+# IF i pass the args when calling the function then it replace the default args with passing args
+average(5, 1)
+
+# Change the keyword args
+average(b=11, a=1)
+
+
+# Example #2
+def fullName(firstName, middleName="Nawaz", lastName="Mirani"):
+    print("My full name is: ", firstName, middleName, lastName)
+
+# IF function multiple parameters but we define all parameters as a default except 1 
+fullName("Mateen")
+
+
+
+# Args lengthe --> kind of tuple example
+def averageUp(*numbers):
+    sum = 0
+    for i in numbers:
+        sum = sum + i
+    print( "The average of numbers is: ", sum / len(numbers)) # len(numbers) define args counts
+    
+averageUp(8, 9, 18, 3, 7)
+
+
+# Dictionary Example 
+def disFun(**args):
+    print("My full name is: ", args['fName'], args['mName'], args['lName'])
+
+disFun(fName = "Mateen", mName = "Nawaz", lName = "Mirani")
+
+
+# Returning value of function
+def returnFun(*args):
+    sum = 0
+    for i in args:
+        sum = sum + i
+    
+    return sum / len(args)
+
+x = returnFun(9, 12, 3, 5)
+print("The average of numbers is: ", x)
+
+
+# Examples of list 
+mixList = [1, 4, 7, 'Mateen', True, 3.2]
+
+print(mixList)
+print(type(mixList))
+print(mixList[3])
+
+# Access element of list in reverse orders
+print(mixList[-4])
+print(mixList[len(mixList) - 4])
+print(mixList[6 - 4])
+print(mixList[2])
+
+
+# By using "in" keywords we check that this searching is in the list or not
+if 9 in mixList:
+    print("Yes")
+else:
+    print("No")
     
 
-calculcateMean(8, 6)
+# Checking something from string
+str8 = 'Mateen Nawaz'
+if "een" in str8:
+    print("Yes")
+else:
+    print("No")
+    
+    
+    
+
+# JumIndex in list
+marks = [12, 32, 43, "Mateen", True, 43, 86, "Engineer"]
+
+print(marks)
+
+# start printing from index 1 and ends on 6
+print(marks[1:6])
 
 
-def greeting(x):
-    if(x == 6 & x <= 10):
-        print("Good Morning!, Mateen")
-    elif (x > 10 & x <= 12):
-        print('Good Afternoon!, Mateen')
-    else:
-        print("Good Night!, Mateen")
-        
+# start printing from index 1 and ends on 6 and jum with 2 indexs
+print(marks[1:6:2])
 
 
-greeting(8)
+# IF we empty the array then Python consider [0:len(marks)]
+print(marks[:])
+
+
+# Let we check that the negative numbers
+print(marks[-1:-3])
+
+
+# List comprehension
+compList = [x for x in range(8)]
+print(compList)
+
+
+compList = [x*x for x in range(8)]
+print(compList)
+
+
+compList = [x for x in range(8) if x%2 == 0]
+print(compList)
+
+
+newList = [1, 2, 3, 4]
+print(newList)
+
+
+# Add new element in the end of array
+newList.append(5)
+print(newList)
+
+# Reverse the order of element array
+newList.reverse()
+print(newList)
+
+# Sorting the element of array in reverse orders
+newList.sort(reverse=True)
+print(newList)
+
+
+
+# Return the index number of element
+print(newList.index(2))
+
+
+# Count the number of occurence in a list
+print(newList.count(1))
+
+
+# Make the copy of existing array
+copiedArray = newList.copy()
+copiedArray[0] = 12
+print(copiedArray)
+
+
+# Insert the new element into existing list element
+copiedArray.insert(2, 86)
+print(copiedArray)
+
+
+# add new list into the existing list
+m = [777, 888, 999]
+newList.extend(m)
+print(newList)
+
+# Here we start with TUPLES
+tup = (1, 21, 86)
+print(type(tup))
+print(tup)
+print(tup[0])
+print(tup[1])
+print(tup[2])
+
+# If you write just one element inside the prenthesis then python consider the data type is int
+# Tuples are unchangable
+tup1 = (1)
+print(type(tup1))
+
+
+tup2 = (12, 21, 43, "Mateen", True, "Mirani", 89)
+print(tup2)
+
+# Slicing of tuple
+tup3 = tup2[1:4]
+print(tup3)
+
+
+# Changed Tuples
+countries = ("Pakistan", "UK", "Spain", "Germany", "Italy")
+print(countries)
+
+# change tuple into list
+temp = list(countries)
+print(temp)
+
+# Now we can change the list 
+temp.append("Europe")
+print(temp)
+
+
+# Remove an item from list
+temp.pop(3)
+print(temp)
+
+countries = tuple(temp)
+print(countries)
+
+# concate the different tuples
+tuple1 = (12, 32, "Mateen", 88)
+tuple2 = (43, 86, "Mirani", True, "Pakistan")
+
+print(tuple1 + tuple2)
+
+# Count the element of tuple
+print(tuple1.count(32))
+
+
+# find the index of passing value on tuple
+res = tuple1.index(12)
+print(res)
