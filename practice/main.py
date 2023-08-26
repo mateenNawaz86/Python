@@ -412,3 +412,307 @@ print(tuple1.count(32))
 # find the index of passing value on tuple
 res = tuple1.index(12)
 print(res)
+
+
+# F-String
+# ---> Old method
+letter = "Hey, my name is {1} and I am from {0}." # passing index when args pass randomly
+name = "Mateen Nawaz"
+country = "Pakistan"
+
+print(letter.format(name, country))
+
+# IF we pass the arguments randomly
+print(letter.format(country, name))
+
+
+# ----> New method using F-string
+print(f"My name is {name} and I am from {country}!")
+
+
+# IF we get the value just for 2 decimal point
+text = "For only price {price:.2f} dollars"
+print(text.format(price = 86.099912))
+
+
+# By using F-string
+price = 86.099912
+print(f"For only {price:.2f} dollars")
+
+# IF we wanna show string as it is 
+print(f"My name is {{name}} and I am from {{country}}")
+
+
+# Doc-string
+# DOc-string write just below the function defination/name
+def square(n):
+    '''Takes in a number n, and return a square of n'''
+    print(n**2)
+    
+square(8)
+# here we display the doc-string
+print(square.__doc__)
+
+
+
+# PEP-8 / Python Enhancement Proposal - 8
+import this
+
+# By printing this we get the Zen of Python is also known as Easter Egg
+print(this)
+
+
+# Recursion in Python
+# def factorial(num):
+    
+#     # Here we can check the conditions
+#     if(num == 0 or num == 1):
+#         return 1
+#     else:
+#         return (num * factorial(num - 1))
+    
+# result = factorial(8)
+# print(result)
+
+# How this line of code work
+# (num * factorial(num - 1))
+# 8 * factorial(8 -1 )
+# 8 * 7 *  factorial(7 -1 )
+# 8 * 7 * 6 * factorial(6 -1 )
+# 8 * 7 * 6 * 5 * factorial(5 -1 )
+# 8 * 7 * 6 * 5 * 4 * factorial(4 -1 )
+# 8 * 7 * 6 * 5 * 4 * 3 * factorial(3 -1 )
+# 8 * 7 * 6 * 5 * 4 * 3 * 2 * factorial(2 -1 )
+# 8 * 7 * 6 * 5 *  4 * 3 * 2 * factorial(1 -1 )
+
+# Here we print the febonacci Sequence
+
+# Here i can define the initial value for febonacci sequence
+# n1 = 0
+# n2 = 1
+# count = 0
+
+# # here we can get the nth-terms from user input
+# userInp = int(input("Please enter a value for nth-terms: "))
+
+# # here we check that the entered value is positive or negative or equal to 1
+# if userInp <= 0:
+#     print("Please enter a positive value!")
+# elif userInp == 1:
+#     print(f"Febonacci Sequence of {userInp} is: ", userInp)
+    
+# else:
+#     print("Febonacci Sequence is here: ")
+#     while userInp > count:
+#         print(n1)
+#         nth = n1 + n2
+#         n1 = n2
+#         n2 = nth
+#         count += 1
+    
+
+# Here we start with the set
+# In python set there should no repetation or duplication of any value
+# Set return the result unorderely
+set1 = {2, 4, 2, 8, 9}
+print(set1)
+
+set2 = {"Mateen", 86, 97, "Developer", True}
+print(set2)
+
+
+# Here we can access the element of set
+for x in set2:
+    print(x)
+
+
+# Quick Quiz for the set
+quizSet = {}
+
+# It return the dict type because set and dictionary both has the same curly braces syntax
+print(type(quizSet))
+
+# Here we can create an empty set
+emptySet = set()
+print(emptySet)
+print(type(emptySet))
+
+
+# set Methods
+s1 = {1, 2, 4, 5,3,2}
+s2 = {3, 6, 7, 2, 8}
+
+# Merg the two sets
+print(s1.union(s2))
+
+
+# Intersection method
+print(s1.intersection(s2))
+
+# Update the value of existing set
+print(s1, s2)
+
+# here i can use update method
+s1.update(s2)
+print(s1, s2)
+
+# Intersection method
+s1.intersection_update(s2)
+print(s1, s2)
+
+
+# Symmetric defference values
+cities1 = {"Multan", "Karachi", "Lahore", "ISlamabad"}
+cities2 = {"Peshawar", "Karachi", "Layyah", "ISlamabad"}
+cities3 = {"Karachi", "ISlamabad"}
+
+# Here i can use the isdijoint 
+print(cities1.isdisjoint(cities2))
+
+# Here i can use the issuperset() for checking cities3 element is in the cities1
+print(cities1.issuperset(cities3))
+
+print(cities1.intersection(cities2))
+print(cities1.symmetric_difference(cities2))
+
+# Here i can use the difference method
+print(cities1.difference(cities2))
+print(cities1.difference_update(cities2))
+
+
+# Here i can check that cities3 element is a subset of cities1
+print(cities1.issubset(cities3))
+
+
+newSet = {"Multan", "London", "Paris", "Lahore"}
+# Here i can  remove the item from the list 
+newSet.remove('Multan')
+print(newSet)
+
+
+# Here i can use the discard method it doesn't throw an error even i put something wrong
+newSet.discard("London1")
+print(newSet)
+
+
+# Here i can define the pop() method which can be reomved element from the end of set
+print(newSet.pop())
+
+
+# Here i can define the del method which is used to del entire set
+marks22 = {21, 54, 342, 98}
+del marks22
+# print(marks22)
+
+
+setNew = {"London", 21, 89, "Layyah"}
+setNew.clear()
+print(setNew)
+
+
+
+# Program for calculating a grade of student
+print("Hello, I'm at Lala Group of Companies!")
+
+
+# Get input from user 
+# strInp1 = input("Type your fisrt name is here: ")
+# strInp2 = input("Type your last name is here: ")
+# print(strInp1, strInp2)
+
+
+# Strings Methods
+# print(strInp1.lower())
+# print(strInp1.upper())
+
+# updateVar = strInp2.replace(strInp2, "Nawaz")
+# print(strInp1, updateVar)
+
+
+# I wanna to print the table of inputed value
+def tableMaker():
+    
+    # Get the input from user
+    tableDig = int(input("Type the number here for the table: "))
+    
+    # Check whether the number is positive or not
+    if tableDig <= 0:
+        print("Please enter a positive number!")
+    else:
+        for i in range(tableDig):
+            print(tableDig, "X", i + 1, "=", tableDig * (i+1))
+
+tableMaker()
+
+# Write a program for check that in which age you're lying
+def calcAge():
+    
+    # Get the input from user
+    enterAge = int(input("Type your age here: "))
+    
+    if enterAge <= 12:
+        print(f"your age {enterAge} is below the driving limit. Please don't drive the car.")
+    elif enterAge > 12 and enterAge <= 18:
+        print(f"You're under age {enterAge}, please don't drive a car!")
+        
+    elif enterAge > 19 and enterAge <= 30:
+        print(f"You're young {enterAge} year's old. Drive the car and motorbike safely!")
+    
+    else: 
+        print(f"You're old with the age of {enterAge}. Please drive car slowly and carefully!")
+        
+calcAge()
+
+
+
+stdMarks = [78, 95, 86, 68]
+
+totalMarks = sum(stdMarks)
+
+
+    
+    # here i can check the grade
+# if x >= 60 and x < 65:
+#     print(f"your grade is D with the marks of {x}. You need to improve this {x.__index__} subject")
+# elif x >= 60 and x < 65:
+#     print(f"your grade is C with the marks of {x}")
+# elif x > 65 and x <= 70:
+#     print(f"Your grade is C+ with the marks of {x}")
+# elif x > 70 and x <= 80:
+#     print(f"Your grade is B & B+ with the marks of {x}")
+# elif x > 80 and x <= 100:
+#     print(f"Your grade is A & A+ with the marks of {x}")
+        
+
+
+# Dictionary start from here
+# Dictionary is an ordered collection of data
+
+
+dic1 = {
+    "name": "Mateen Nawaz",
+    "status": "Single"
+}
+
+# Access of the single element of an dictionary
+print(dic1["name"])
+print(dic1.get("status"))
+
+print(dic1)
+
+# Get the all keys of dictionary
+print(dic1.keys())
+
+
+# IF we wanna to show the keys one by one
+for key in dic1.keys():
+    print(key)
+    
+# IF we wanna to show the keys values one by one
+for key in dic1.keys():
+    print(dic1[key])
+
+
+# Print the key value like a string
+for key, value in dic1.items():
+    print(f"The value corresponding to the key {key} is {value}")
